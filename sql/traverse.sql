@@ -1,7 +1,5 @@
-WITH RECURSIVE traverse(id) AS (
+WITH RECURSIVE traverse(uid) AS (
   SELECT :source
   UNION
-  SELECT source FROM edges JOIN traverse ON target = id
-  UNION
-  SELECT target FROM edges JOIN traverse ON source = id
-) SELECT id FROM traverse;
+  SELECT source FROM edges JOIN traverse ON target = uid  UNION
+  SELECT target FROM edges JOIN traverse ON source = uid) SELECT uid FROM traverse;

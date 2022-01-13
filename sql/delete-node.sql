@@ -1,1 +1,1 @@
-DELETE FROM nodes WHERE id = ?
+DELETE FROM nodes WHERE uid = ?

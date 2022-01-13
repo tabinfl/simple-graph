@@ -1,1 +1,1 @@
-SELECT body FROM nodes WHERE id = ?
+SELECT body FROM nodes WHERE uid = ?
